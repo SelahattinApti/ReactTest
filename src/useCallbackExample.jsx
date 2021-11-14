@@ -3,13 +3,13 @@ function CandyDispenser() {
   const initialCandies = ["snickers", "skittles", "twix", "milky way"];
   const [candies, setCandies] = useState(initialCandies);
 
-  const dispense = (candy) => {
+  /*   const dispense = (candy) => {
     setCandies((allCandies) => allCandies.filter((c) => c !== candy));
   };
-
-  /*   const dispense = useCallback((candy) => {
+ */
+  const dispense = useCallback((candy) => {
     setCandies((allCandies) => allCandies.filter((c) => c !== candy));
-  }, []); */
+  }, []);
 
   return (
     <div>
