@@ -12,9 +12,9 @@ const App = () => (
   <div className="App">
     <HookExample2 />
     <Counter />
-    <RandomNumbers></RandomNumbers>
-    <Candies></Candies>
-    <Listener></Listener>
+    <RandomNumbers />
+    <Candies />
+    <Listener />
     <Counter2 />
   </div>
 );
