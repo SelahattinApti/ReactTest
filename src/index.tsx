@@ -4,7 +4,7 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import store from "./store";
 import { Provider } from "react-redux";
-import Counter from "./ReactReduxExample";
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>

@@ -18,16 +18,35 @@ const Counter2 = () => {
   const reducer = (state, action) => {
     switch (action.type) {
       case "increment":
-        return { count: state.count + 1 };
+        if (state.count === count) {
+          disptch(increment());
+          return { ...state };
+        } else {
+          return { ...state };
+        }
+
       case "decrement":
-        disptch(decrement());
-        return { count: count };
+        if (state.count === count) {
+          disptch(decrement());
+          return { ...state };
+        } else {
+          return { ...state };
+        }
+      case "set":
+        return { ...state, count: count };
+
       default:
         throw new Error();
     }
   };
 
-  const [state, dispatch] = useReducer(reducer, { count: count });
+  const [state, dispatch] = useReducer(reducer, []);
+  useEffect(() => {
+    //state.count = count;
+    console.log(state.count);
+    console.log(count);
+    dispatch({ type: "set" });
+  }, [count]);
 
   return (
     <div>

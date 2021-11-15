@@ -6,6 +6,7 @@ import Counter from "./ReactReduxExample";
 import Counter2 from "./useReduceExample";
 import RandomNumbers from "./useContextExample";
 import Candies from "./useCallbackExample";
+import Listener from "./MousePositionListenExample";
 
 const App = () => (
   <div className="App">
@@ -13,6 +14,7 @@ const App = () => (
     <Counter />
     <RandomNumbers></RandomNumbers>
     <Candies></Candies>
+    <Listener></Listener>
     <Counter2 />
   </div>
 );
