@@ -1,14 +1,18 @@
 import React, { useEffect, useState, useRef } from "react";
 //import { Dimensions } from "react";
 import { useSelector } from "react-redux";
+import ThemedButton from "./contex/themed-button";
+import { ThemeContext } from "./contex/theme-context";
 const test = require("./Example");
 
-const HookExample2 = () => {
+const HookExample2 = (props) => {
   const count = useSelector((state) => state.counter.value);
   const [message, setMessage] = useState([]);
   const [name, setName] = useState([]);
   const [isTyping, setIsTyping] = useState(false);
   const inputEl = useRef(null);
+  const value = React.useContext(ThemeContext);
+  /* const [buttonTheme, setButtonTheme] = useState(this.props.theme); */
 
   //const { width, height } = Dimensions.get("window");
   //const [sayi, setSayi] = useState(count);
@@ -24,6 +28,7 @@ const HookExample2 = () => {
   useEffect(() => {
     console.log(`Function did mount`);
     document.title = ` ${count}- ${name} hooks`;
+    console.log(`theme:${JSON.stringify(value)}`);
   }, []);
   useEffect(() => {
     // We don't want to fetch message when user is typing

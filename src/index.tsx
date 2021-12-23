@@ -4,11 +4,14 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import store from "./store";
 import { Provider } from "react-redux";
+import { ThemeContext, themes } from "./contex/theme-context";
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <ThemeContext.Provider value={themes.light}>
+        <App />
+      </ThemeContext.Provider>
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")
