@@ -7,6 +7,7 @@ import Counter2 from "./useReduceExample";
 import RandomNumbers from "./useContextExample";
 import Candies from "./useCallbackExample";
 import Listener from "./MousePositionListenExample";
+import HookExample3 from "./useEffectExample1";
 import { ThemeContext, themes } from "./contex/theme-context";
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <Candies />
       <Listener />
       <Counter2 />
+      <HookExample3 />
     </div>
   );
 };
